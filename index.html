@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alioth's 로그인 페이지</title>
+<!-----
+	<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f2f2f2;
+	}
+	.container {
+		width: 300px;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		margin-top: 100px;
+	}
+	h2 {
+		text-align: center;
+	}
+	input[type="text"], input[type="password"] {
+		width: 100%;
+		padding: 10px;
+		margin: 10px 0;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+	}
+	input[type="submit"] {
+		background-color: #4caf50;
+		width: 100%;
+		padding: 10px;
+		color: white;
+		border: none;
+		margin-top: 10px;
+		cursor: pointer;
+		border-radius: 3px;
+	}
+	input[type="submit"]:hover {
+		background-color: #45a049;
+	}
+	</style>
+
+---->
+</head>
+<body>
+<!--<div class="container">-->
+	<h2>로그인</h2>
+
+	<form action="http://localhost/login.php">
+		<p>아이디 : <input type="text" name="id"></p>
+		<p>비밀번호 : <input type="password" name="pw"></p>
+		<p><input type="submit" value="로그인"></p>
+	</form>
+
+	<form action="/login" method="post">
+		<label for="username">사용자 이름:</label>
+		<input type="text" id="username" name="username" placeholder="사용자 이름을 입력하세요" required>
+
+		<label for="password">비밀번호:</label>
+		<input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+
+		<input type="submit" value="로그인">
+	</form>
+<!--</div>-->
+</body>
+</html>
