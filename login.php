@@ -37,12 +37,26 @@ $result = $sql->get_result();
 if ($result->num_rows > 0) {
     // 로그인 성공
     echo "로그인 성공!";
+
+    // sesstion 부여
+    session_start();
+    $_SESSION['userid'] = $userid;
+    header("Location: index.php");
+    exit;
 } else {
     // 로그인 실패
     echo "유효하지 않은 사용자 정보입니다.";
+
+    // main 페이지로 돌아가기
+    $link_url = "index.php";
+    $link_text = "메인 페이지로 돌아가기";
+    echo "<p><a href='$link_url'>$link_text</a></p>";
 }
 
 // 연결 닫기
 $sql->close();
 $conn->close();
+
+
+
 ?>

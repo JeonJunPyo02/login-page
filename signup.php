@@ -23,6 +23,10 @@ $userpw = $_POST['userpw'];
 $name = $_POST['name'];
 $email = $_POST['email'];
 
+// main 페이지
+$link_url = "index.php";
+$link_text = "메인 페이지로 돌아가기";
+
 // SQL 쿼리 작성
 // userid=? -> 입력받을 파라미터
 $sql = $conn->prepare("INSERT INTO users(userid,userpw,name,email,created) VALUES(?, ?, ?, ?, NOW())");
@@ -39,9 +43,16 @@ $result = $sql->affected_rows;
 if ($result > 0) {
     // 회원가입 성공
     echo "회원가입 성공!";
+
+    // index.php 페이지로 돌아가기
+    echo "<p><a href='$link_url'>$link_text</a></p>";
+
 } else {
     // 회원가입 실패
     echo "회원가입 실패..";
+
+    // index.php 페이지로 돌아가기
+    echo "<p><a href='$link_url'>$link_text</a></p>";
 }
 
 // 연결 닫기
