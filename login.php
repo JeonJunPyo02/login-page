@@ -1,6 +1,6 @@
 <?php
 // MySQL 데이터베이스 연결 정보
-$servername = "localhost"; // MySQL 서버 주소
+$servername = "127.0.0.1"; // MySQL 서버 주소
 $username = "user"; // MySQL 사용자 이름
 $password = "1234"; // MySQL 비밀번호
 $dbname = "account"; // 사용할 데이터베이스 이름
