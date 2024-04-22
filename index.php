@@ -1,25 +1,40 @@
+<?php 
+  include 'session.php';
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Alioth's  웹 페이지</title>
-</head>
-<body>
-	<h2>Alioth's Web Page!</h2>
-	<?php
-	session_start();
 
-	if(isset($_SESSION['userid'])) {
-		$userid = $_SESSION['userid'];
-		echo "안녕하세요! $userid 님";
-		echo '<form action="logout.php" method="post">';
-		echo '<input type="submit" value="로그아웃">';
-		echo '</form>';
-	} else {
-		echo '<a href="login.html">로그인</a><br>';
-		echo '<a href="signup.html">회원가입</a>';
-	}
-	?>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, intial-scale=1.0'>
+  
+  <link rel="stylesheet" href="index.css">
+
+  <title>Alioth's Web Page</title>
+
+</head>
+
+<body>
+  <h1>Alioth's Web Page</h1>
+
+  <div class="account-field">
+  <?php 
+    if($logined) {
+      echo $userid."님 | "
+  ?>
+    <a href="logout.php">로그아웃</a>
+  <?php 
+    } else {
+  ?>
+    <a href="login.html">로그인</a>
+    |
+    <a href="signup.html">회원가입</a>
+  <?php 
+    }
+  ?>
+  </div>
 </body>
+
 </html>

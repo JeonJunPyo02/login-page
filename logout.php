@@ -1,9 +1,8 @@
 <?php 
 session_start();
-session_unset();
 session_destroy();
-$redirect_url = "index.php";
-
-header("Location: $redirect_url");
-exit;
 ?>
+<script>
+    alert("로그아웃 되었습니다.");
+    location.replace('index.php')
+</script>
