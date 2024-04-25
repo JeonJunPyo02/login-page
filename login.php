@@ -1,5 +1,5 @@
 <?php
-include("dbconn.php");
+include("function/dbconn.php");
 
 // input 태그에서 전달된 사용자 입력 값 가져오기
 $userid = $_POST['userid'];
@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
     session_start();
     $_SESSION['userid'] = $userid;
     header("Location: index.php");
+    exit;
 
 } else {
     // 로그인 실패

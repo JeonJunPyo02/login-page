@@ -1,5 +1,5 @@
 <?php 
-  include 'session.php';
+  include 'function/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name='viewport' content='width=device-width, intial-scale=1.0'>
   
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="/css/index.css">
 
   <title>Alioth's Web Page</title>
 
