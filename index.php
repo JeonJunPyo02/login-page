@@ -1,5 +1,5 @@
 <?php 
-  include 'function/session.php';
+  require_once 'function/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,9 +22,10 @@
   <div class="account-field">
   <?php 
     if($logined) {
-      echo $userid."님 | "
+      echo "<a href='mypage.php'>$name</a>"."님";
   ?>
-    <a href="logout.php">로그아웃</a>
+    |
+    <a href="function/logout.php">로그아웃</a>
   <?php 
     } else {
   ?>

@@ -1,6 +1,6 @@
 <?php
 // DB 연결 정보 가져오기
-include("function/dbconn.php");
+require_once("function/dbconn.php");
 
 // input 태그에서 전달된 사용자 입력 값 가져오기
 $userid = $_POST['userid'];
