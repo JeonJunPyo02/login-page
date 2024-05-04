@@ -1,5 +1,5 @@
 <?php 
-// 1. 식별/인증 동시
+// 3. 식별/인증 동시 (feat. HASH)
 
 // DB 접속 정보 가져오기
 require_once("../function/dbconn.php");
@@ -7,6 +7,9 @@ require_once("../function/dbconn.php");
 // 사용자 입력 정보 받아오기
 $userid = $_POST['userid'];
 $userpw = $_POST['userpw'];
+
+// 비밀번호를 HASH 값으로 변경
+$userpw = md5($userpw);
 
 // 쿼리 작성
 $sql = "select name from users where userid='$userid' and userpw='$userpw'";

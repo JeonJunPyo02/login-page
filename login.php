@@ -4,6 +4,7 @@ require_once("function/dbconn.php");
 // input 태그에서 전달된 사용자 입력 값 가져오기
 $userid = $_POST['userid'];
 $userpw = $_POST['userpw'];
+$userpw = md5($userpw);
 
 // SQL 쿼리 작성
 // userid=? -> 입력받을 파라미터
