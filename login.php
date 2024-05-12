@@ -38,7 +38,6 @@ if ($result->num_rows > 0) {
     // echo "<p><a href='$link_url'>$link_text</a></p>";
 }
 
-
 // 연결 닫기
 $sql->close();
 $conn->close();

@@ -19,6 +19,10 @@ require_once("function/session.php");
 <body>
   <h1>Alioth's Web Page</h1>
 
+  <div class="board-field">
+    <a href="board.php">게시판</a>
+  </div>
+
   <div class="account-field">
   <?php 
     if($logined) {

