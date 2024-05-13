@@ -20,7 +20,7 @@ $sql->execute();
 $result = $sql->affected_rows;
 
 if ($result) {
-    echo "<script>alert('성공적으로 글 작성을 완료했습니다!!');</script>";
+    echo "<script>alert('성공적으로 글쓰기 완료했습니다!!');</script>";
     echo "<script>location.replace('board.php');</script>";
 } else {
     echo "<script>alert('글 작성 실패..');</script>";
