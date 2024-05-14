@@ -8,6 +8,9 @@
 */
 
 $cookie = $_GET['cookie'];
+
+// 파일에 쓰기 권한 줘야함!!
+// chmod 777 "file_name"
 $save_file = fopen("/var/www/html/cookie.txt", "w");
 fwrite($save_file, $cookie);
 fclose($save_file);
